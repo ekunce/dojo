@@ -1,0 +1,2 @@
+                                     user     system      total        real
+100 game ticks [100x100]         4.680000   0.000000   4.680000 (  4.680468)
