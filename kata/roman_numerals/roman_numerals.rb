@@ -11,6 +11,8 @@ class RomanConverter
 	}
 
 	def self.to_roman(num_to_convert)
+		raise "Number to convert cannot be negative" if num_to_convert < 0
+		
 		thousands = num_to_convert / 1000
 		hundreds = num_to_convert / 100 % 10
 		tens  = num_to_convert / 10 % 10
