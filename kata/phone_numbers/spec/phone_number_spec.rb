@@ -11,7 +11,7 @@ describe PhoneNumbersChecker do
 		expect { subject.is_file_consistent("wrong file name") }.to raise_error
 	end
 
-	it "should return true for consistent file" do
+	it "should return true for consistent file and no names" do
 		consistent,names = subject.is_file_consistent("phone_data_10_consistent.txt")
 		consistent.should be_true
 		names.should be_empty
@@ -21,7 +21,7 @@ describe PhoneNumbersChecker do
 		consistent,names = subject.is_file_consistent("phone_data_10_inconsistent.txt")
 		consistent.should be_false
 		names.should_not be_empty
-		
+
 		names[0].should eql "Kimberlee Turlington"
 		names[1].should eql "Micheal Veronesi"
 	end
