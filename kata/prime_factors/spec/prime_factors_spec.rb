@@ -50,6 +50,4 @@ describe PrimeFactors do
 	it "should find prime factors for 9 using tail" do
 		subject.generate_tail(9).should eql [3,3]
 	end
-
-
 end
